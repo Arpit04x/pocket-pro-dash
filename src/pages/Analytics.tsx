@@ -114,7 +114,7 @@ const Analytics = () => {
 
       {/* Summary Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card>
+        <Card variant="modern">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Total Transactions</CardTitle>
           </CardHeader>
@@ -131,7 +131,7 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card variant="modern">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Net Balance</CardTitle>
           </CardHeader>
@@ -145,7 +145,7 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card variant="modern">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Avg Income</CardTitle>
           </CardHeader>
@@ -159,7 +159,7 @@ const Analytics = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card variant="modern">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Avg Expense</CardTitle>
           </CardHeader>
@@ -176,7 +176,7 @@ const Analytics = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Income by Category */}
-        <Card>
+        <Card variant="modern">
           <CardHeader>
             <CardTitle>Income by Category</CardTitle>
           </CardHeader>
@@ -214,7 +214,7 @@ const Analytics = () => {
         </Card>
 
         {/* Expenses by Category */}
-        <Card>
+        <Card variant="modern">
           <CardHeader>
             <CardTitle>Expenses by Category</CardTitle>
           </CardHeader>
@@ -253,7 +253,7 @@ const Analytics = () => {
       </div>
 
       {/* Monthly Breakdown */}
-      <Card>
+      <Card variant="modern">
         <CardHeader>
           <CardTitle>Monthly Breakdown</CardTitle>
         </CardHeader>

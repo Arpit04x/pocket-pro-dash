@@ -32,7 +32,7 @@ const Dashboard = () => {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Balance Card */}
-        <Card>
+        <Card variant="modern">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Balance</CardTitle>
             <Wallet className="h-4 w-4 text-muted-foreground" />
@@ -46,7 +46,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Income Card */}
-        <Card>
+        <Card variant="modern">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Income</CardTitle>
             <TrendingUp className="h-4 w-4 text-income" />
@@ -60,7 +60,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Expenses Card */}
-        <Card>
+        <Card variant="modern">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Expenses</CardTitle>
             <TrendingDown className="h-4 w-4 text-expense" />
@@ -74,7 +74,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Savings Rate Card */}
-        <Card>
+        <Card variant="modern">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Savings Rate</CardTitle>
             <DollarSign className="h-4 w-4 text-savings" />
@@ -92,7 +92,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Transactions */}
-        <Card>
+        <Card variant="modern">
           <CardHeader>
             <CardTitle>Recent Transactions</CardTitle>
           </CardHeader>
@@ -141,7 +141,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Expense Categories */}
-        <Card>
+        <Card variant="modern">
           <CardHeader>
             <CardTitle>Expenses by Category</CardTitle>
           </CardHeader>

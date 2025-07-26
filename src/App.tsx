@@ -19,9 +19,9 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen bg-modern">
             <Navigation />
-            <main className="container mx-auto px-4 py-6">
+            <main className="container mx-auto px-4 py-6 relative z-10">
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/add-transaction" element={<AddTransaction />} />

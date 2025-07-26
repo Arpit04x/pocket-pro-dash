@@ -8,23 +8,23 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 212 47% 12%;
+    --background: 210 20% 98%;
+    --foreground: 220 13% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 212 47% 12%;
+    --card-foreground: 220 13% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 212 47% 12%;
+    --popover-foreground: 220 13% 9%;
 
     --primary: 220 91% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 13% 96%;
-    --secondary-foreground: 212 47% 12%;
+    --secondary-foreground: 220 13% 9%;
 
     --muted: 220 13% 96%;
-    --muted-foreground: 215 25% 46%;
+    --muted-foreground: 220 9% 46%;
 
     --accent: 142 71% 45%;
     --accent-foreground: 0 0% 100%;
@@ -36,22 +36,28 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 220 91% 52%;
 
-    /* Finance specific colors */
+    /* Finance specific colors - all HSL */
     --income: 142 71% 45%;
     --income-foreground: 0 0% 100%;
     --expense: 0 85% 60%;
     --expense-foreground: 0 0% 100%;
-    --savings: 45 93% 58%;
-    --savings-foreground: 0 0% 100%;
+    --savings: 45 93% 47%;
+    --savings-foreground: 220 13% 9%;
 
-    /* Chart colors */
+    /* Chart colors - all HSL */
     --chart-1: 220 91% 52%;
     --chart-2: 142 71% 45%;
     --chart-3: 0 85% 60%;
-    --chart-4: 45 93% 58%;
+    --chart-4: 45 93% 47%;
     --chart-5: 262 83% 58%;
 
-    --radius: 0.5rem;
+    /* Modern gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 91% 52%), hsl(220 91% 62%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%));
+    --gradient-bg: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(220 13% 96%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -116,5 +122,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Modern background patterns */
+  .bg-modern {
+    background: var(--gradient-bg);
+    position: relative;
+  }
+  
+  .bg-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(220 91% 52% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(142 71% 45% / 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .card-modern {
+    background: var(--gradient-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 
+      0 1px 3px 0 hsl(var(--foreground) / 0.1),
+      0 1px 2px 0 hsl(var(--foreground) / 0.06);
+  }
+
+  .glass-effect {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
   }
 }

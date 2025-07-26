@@ -103,7 +103,7 @@ const AddTransaction = () => {
         <h1 className="text-2xl font-bold">Add New Transaction</h1>
       </div>
 
-      <Card>
+      <Card variant="modern">
         <CardHeader>
           <CardTitle>Transaction Details</CardTitle>
         </CardHeader>
@@ -209,7 +209,7 @@ const AddTransaction = () => {
       </Card>
 
       {/* Quick Add Buttons */}
-      <Card>
+      <Card variant="modern">
         <CardHeader>
           <CardTitle>Quick Add</CardTitle>
         </CardHeader>
